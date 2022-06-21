@@ -24,6 +24,7 @@ Namespace SecuritySystemExample.Win
 		End Sub
 		<STAThread> _
 		Shared Sub Main()
+            DevExpress.ExpressApp.FrameworkSettings.DefaultSettingsCompatibilityMode = DevExpress.ExpressApp.FrameworkSettingsCompatibilityMode.v20_1
 #If EASYTEST Then
 			DevExpress.ExpressApp.Win.EasyTest.EasyTestRemotingRegistration.Register()
 #End If

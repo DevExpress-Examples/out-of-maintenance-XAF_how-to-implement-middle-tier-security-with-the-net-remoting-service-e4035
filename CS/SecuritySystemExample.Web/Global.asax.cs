@@ -9,7 +9,7 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.Web;
-using DevExpress.Web.ASPxClasses;
+using DevExpress.Web;
 using System.Collections;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Remoting.Channels;
@@ -22,6 +22,7 @@ namespace SecuritySystemExample.Web {
             InitializeComponent();
         }
         protected void Application_Start(Object sender, EventArgs e) {
+            DevExpress.ExpressApp.FrameworkSettings.DefaultSettingsCompatibilityMode = DevExpress.ExpressApp.FrameworkSettingsCompatibilityMode.v20_1;
             ASPxWebControl.CallbackError += new EventHandler(Application_Error);
             string connectionString = "tcp://localhost:1425/DataServer";
             Hashtable t = new Hashtable();

@@ -18,6 +18,7 @@ using DevExpress.ExpressApp.Xpo;
 namespace ConsoleApplicationServer {
     class Program {
         static void Main(string[] args) {
+            DevExpress.ExpressApp.FrameworkSettings.DefaultSettingsCompatibilityMode = DevExpress.ExpressApp.FrameworkSettingsCompatibilityMode.v20_1;
             try {
                 ValueManager.ValueManagerType = typeof(MultiThreadValueManager<>).GetGenericTypeDefinition();
 

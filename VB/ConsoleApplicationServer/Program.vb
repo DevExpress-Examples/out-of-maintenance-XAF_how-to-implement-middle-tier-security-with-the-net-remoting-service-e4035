@@ -19,7 +19,8 @@ Imports DevExpress.ExpressApp.Xpo
 Namespace ConsoleApplicationServer
 	Friend Class Program
 		Shared Sub Main(ByVal args() As String)
-			Try
+			            DevExpress.ExpressApp.FrameworkSettings.DefaultSettingsCompatibilityMode = DevExpress.ExpressApp.FrameworkSettingsCompatibilityMode.v20_1
+Try
 				ValueManager.ValueManagerType = GetType(MultiThreadValueManager(Of )).GetGenericTypeDefinition()
 
 				'string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;

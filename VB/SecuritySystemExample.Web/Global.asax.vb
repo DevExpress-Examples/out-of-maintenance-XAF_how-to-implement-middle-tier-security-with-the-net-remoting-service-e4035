@@ -10,7 +10,7 @@ Imports DevExpress.Persistent.Base
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.ExpressApp.Security
 Imports DevExpress.ExpressApp.Web
-Imports DevExpress.Web.ASPxClasses
+Imports DevExpress.Web
 Imports System.Collections
 Imports System.Runtime.Remoting.Channels.Tcp
 Imports System.Runtime.Remoting.Channels
@@ -24,7 +24,8 @@ Namespace SecuritySystemExample.Web
 			InitializeComponent()
 		End Sub
 		Protected Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
-			AddHandler ASPxWebControl.CallbackError, AddressOf Application_Error
+			            DevExpress.ExpressApp.FrameworkSettings.DefaultSettingsCompatibilityMode = DevExpress.ExpressApp.FrameworkSettingsCompatibilityMode.v20_1
+AddHandler ASPxWebControl.CallbackError, AddressOf Application_Error
 			Dim connectionString As String = "tcp://localhost:1425/DataServer"
 			Dim t As New Hashtable()
 			t.Add("secure", True)
